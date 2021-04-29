@@ -1,0 +1,165 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@import 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+
+:root {
+    --rad: 3px;
+    --dark: #282c34;
+    --clock: #ad483a;
+    --clockShadow: #6e2d25;
+    --display: #879995;
+    --displayText: #425a55;
+    --white: #ffffff;
+    --primary: #656670;
+    --primShadow: rgb(84, 85, 97);
+    --tertiary: #6eaadc;
+    --terShadow: #5a8cb5;
+
+    --font-primary: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    --font-display: 'Press Start 2P', cursive;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    margin-block-start: 0;
+
+    align-items: center;
+    justify-content: center;
+    list-style-position: inside;
+
+    text-decoration: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: .15rem;
+}
+
+/* body, html, #root { */
+#root {
+    font-family: var(--font-primary);
+    height: 100vh;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#root{
+    display: flex;
+    color: var(--white);
+    text-align: center;
+}
+
+body {
+    background-color: var(--dark);
+}
+
+h1 {
+    padding: 3rem;  
+}
+
+p {
+    padding: 0.5rem 0;
+}
+
+#clock {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2rem auto;
+    padding: 2rem;
+    padding-top: 1rem;
+    width: 22rem;
+    place-items: center;
+    border-radius: var(--rad);
+    background-color: var(--clock);
+    box-shadow: 0px 10px 0px 0px var(--clockShadow);
+}
+
+.display {
+    display: flex;
+    overflow: hidden;   
+    width: 5rem;
+    padding: .5rem 0.5rem;
+    transition: 200ms;
+    
+    letter-spacing: 0rem;
+    font-family: var(--font-display);
+    border-radius: var(--rad);
+    background: var(--display);
+    color: var(--displayText);
+    box-shadow: 0px -3px 0px 0px var(--clockShadow);
+}
+
+#time-left {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    padding: .8rem 0.5rem;
+    margin: .8rem 0;
+    font-size: 1.5rem;
+}
+
+#controller {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+.btn-controller {
+    display: flex;
+    justify-content: space-evenly;
+    width: 7.5rem;
+}
+#break-label, #session-label, .play-reset {
+    display: flex;
+    flex-direction: column;
+}
+#break-length, #session-length {
+    margin: .5rem 0;
+}
+#start_stop {
+    font-size: .8rem;
+}
+#reset {
+    font-size: 1.2rem;
+    margin-top: .9rem;
+}
+
+
+button {
+    width: 3rem;
+    height: 3rem;
+
+    padding: 0.5rem 0.5rem;
+    transition: 200ms;
+
+    background: var(--primary);
+    color: var(--white);
+
+    font-size: 2rem;
+    border-radius: var(--rad);
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0px 5px 0px 0px var(--primShadow);
+}
+button:active, .active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px var(--primShadow);
+}
+button:active, .active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px var(--primShadow);
+}
+
+.btn-tertiary {
+    background: var(--tertiary);
+    box-shadow: 0px 5px 0px 0px var(--terShadow);
+}
+#btn-tertiary:active{
+    box-shadow: 0px 0px 0px 0px var(--terShadow);
+}
+
+
+
+
